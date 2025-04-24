@@ -1,9 +1,9 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SplashScreen from '../screens/SplashScreen';
-import HomeScreen from '../screens/homescreens';
+import HomeScreen from '../screens/HomeScreen';
 import SurahDetailScreen from '../screens/SurahDetailScreen';
-import quranAPI from '../API/quranAPI';
+
 const Stack = createNativeStackNavigator();
 
 export default function AppNavigator() {
