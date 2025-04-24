@@ -1,12 +1,11 @@
-import { useState }  from "react";
-// import { Text, View } from "react-native-web";
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import AppNavigator from '../../src/navigation/AppNavigator';
 
-export default function index(){
-  const [Quran, setQuran] = useState([]);
-  //data dari API
-  const getQuran = async () =>{
-    const response = await fetch("https://equran.id/apidev/v2")
-    const data = await response.json()
-    setQuran (data.response)
-  }
+export default function App() {
+  return (
+    <NavigationContainer>
+      <AppNavigator />
+    </NavigationContainer>
+  );
 }

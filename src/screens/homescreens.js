@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList, TouchableOpacity } from 'react-native';
-import { getSurahList } from './API/quranAPI';
+import { getSurahList } from '../API/quranAPI';
 
 useEffect(() => {
     getSurahList().then(res => setSurah(res.data));
