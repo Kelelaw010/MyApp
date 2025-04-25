@@ -1,24 +1,8 @@
-import { useEffect, useState } from "react";
-import { Text, View } from "react-native";
+import axios from 'axios';
 
-export default function Index() {
-  const [quran, setQuran] = useState([]);
+const api = axios.create({
+  baseURL: 'https://equran.id/api',
+});
 
-  // ambil data dari api
-  const getQuran = async () => {
-    const response = await fetch("https://equran.id/apidev/v2");
-    const data = await response.json();
-    setQuran(data.response);
-    console.log(data);
-  };
-  //panggil si quran
-  useEffect(() => {
-    getQuran();
-  }, []);
-
-  return (
-    <View  style= {{fontSize:28, fontWeight: 'bold', color: '#212121'}}>
-      <Text>Daftar Surah</Text>
-    </View>
-  );
-}
+export const getSurahList = () => api.get('/surat');
+export const getSurahDetail = (id) => api.get(`/surat/${id}`);

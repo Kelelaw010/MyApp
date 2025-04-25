@@ -3,10 +3,10 @@ import { View, Text, FlatList, TouchableOpacity,} from 'react-native';
 import { getSurahList } from '../API/quranAPI';
 
 export default function HomeScreen({ navigation }) {
-  const [surah, getSurah] = useState([]);
+  const [surah, setSurah] = useState([]);
 
   useEffect(() => {
-    getSurahList().then(res => getSurah(res.data));
+    getSurahList().then(res => setSurah(res.data));
   }, []);
 
 
@@ -25,4 +25,5 @@ export default function HomeScreen({ navigation }) {
       />
     </View>
   );
+  
 }
