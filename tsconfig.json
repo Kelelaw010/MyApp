@@ -3,9 +3,7 @@
   "compilerOptions": {
     "strict": true,
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     }
   },
   "include": [
@@ -13,5 +11,5 @@
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
-, "src/screens/SplashScreen.js", "src/screens/homescreens.js"  ]
+, "src/navigation/AppNavigator.js", "app/(tabs)/index.js", "src/screens/HomeScreen.js"  ]
 }

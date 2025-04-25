@@ -14,7 +14,7 @@ export default function SplashScreen({ navigation }) {
 
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate('HomeScreen')}
+        onPress={() => navigation.navigate('Home')}
       >
         <Text style={styles.buttonText}>Get Started</Text>
       </TouchableOpacity>
