@@ -17,7 +17,8 @@ export default function SurahDetailScreen({ route }) {
     <ScrollView style={{ padding: 16 }}>
       {surah && (
         <>
-          <Text style={{ fontSize: 24, fontWeight: 'bold' }}>{surah.name.transliteration.id}</Text>
+        <View style={{backgroundColor: '#EADCF0', padding:12, borderRadius:8, marginBottom:16}}> 
+          <Text style={{ fontSize: 24, fontWeight: 'bold',}}>{surah.name.transliteration.id}</Text>
           <Text style={{ fontStyle: 'italic' }}>{surah.name.translation.id} - {surah.numberOfVerses} Ayat</Text>
           {surah.verses.map((verse) => (
             <View key={verse.number.inSurah} style={{ marginVertical: 10 }}>
@@ -25,6 +26,7 @@ export default function SurahDetailScreen({ route }) {
               <Text style={{ color: '#555' }}>{verse.translation.id}</Text>
             </View>
           ))}
+          </View>
         </>
       )}
     </ScrollView>

@@ -11,11 +11,20 @@ export default function HomeScreen({ navigation }) {
 
 
   const renderItem = ({ item }) => (
-    <TouchableOpacity onPress={() => navigation.navigate('SurahDetail', { id: item.nomor })}>
+    <TouchableOpacity onPress={() => navigation.navigate('SurahDetail', { id: item.nomor })}
+      style={{
+        backgroundColor: '#EADCF0',
+        padding: 12,
+        marginVertical: 6,
+        marginHorizontal: 16,
+        borderRadius: 8,
+      }}
+      >
       <Text style={{ fontSize: 18, padding: 10 }}>{item.nomor}. {item.nama_latin}</Text>
     </TouchableOpacity>
   );
-
+  
+ //daftar surah
   return (
     <View style={{ flex: 1, paddingTop: 40 }}>
       <FlatList 
@@ -25,5 +34,6 @@ export default function HomeScreen({ navigation }) {
       />
     </View>
   );
-  
 }
+
+
